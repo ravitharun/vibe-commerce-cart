@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Ravi Tharun",
+    "email": "ravi@example.com",
+    "phone": "7396994383",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "country": "India"
+  },
+  {
+    "name": "Pranav Kumar",
+    "email": "pranav@example.com",
+    "phone": "9876543210",
+    "city": "Hyderabad",
+    "state": "Telangana",
+    "country": "India"
+  },
+  {
+    "name": "Anita Sharma",
+    "email": "anita@example.com",
+    "phone": "9123456780",
+    "city": "Delhi",
+    "state": "Delhi",
+    "country": "India"
+  },
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "9988776655",
+    "city": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "phone": "9871234567",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India"
+  },
+  {
+    "name": "Akash Verma",
+    "email": "akash.verma@example.com",
+    "phone": "9012345678",
+    "city": "Pune",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  {
+    "name": "Sneha Patel",
+    "email": "sneha.patel@example.com",
+    "phone": "9234567890",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "country": "India"
+  },
+  {
+    "name": "Rohan Gupta",
+    "email": "rohan.gupta@example.com",
+    "phone": "9345678901",
+    "city": "Kolkata",
+    "state": "West Bengal",
+    "country": "India"
+  }
+]
