@@ -3,8 +3,8 @@
     "id": 1,
     "name": "Wireless Headphones",
     "description": "High-quality wireless headphones with noise cancellation",
-    "price": 195.76,
-    "currency": "USD",
+    "price": 16599.17,
+    "currency": "INR",
     "category": "Electronics",
     "brand": "TechBrand",
     "inStock": true,
@@ -15,318 +15,353 @@
       "batteryLife": "30 hours",
       "connectivity": "Bluetooth 5.0"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["wireless", "noise-cancellation", "premium"],
+    "imgUrl": "https://tse1.mm.bing.net/th/id/OIP.J7NMYWLyHrKdCr-Eqndf-wHaIx?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     "id": 2,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 249.29,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Smart Watch",
+    "description": "Fitness smart watch with heart-rate monitoring",
+    "price": 12449.17,
+    "currency": "INR",
+    "category": "Wearables",
+    "brand": "FitBrand",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 35,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Gray",
+      "weight": "45g",
+      "batteryLife": "7 days",
+      "connectivity": "Bluetooth"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["smartwatch", "fitness", "health"],
+    "imgUrl": "https://m.media-amazon.com/images/I/61ftG19NACL._AC_SL1500_.jpg"
   },
   {
     "id": 3,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 179.65,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Bluetooth Speaker",
+    "description": "Portable Bluetooth speaker with waterproof design",
+    "price": 7469.17,
+    "currency": "INR",
+    "category": "Audio",
+    "brand": "SoundWave",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 60,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
+      "color": "Blue",
+      "weight": "600g",
+      "batteryLife": "12 hours",
       "connectivity": "Bluetooth 5.0"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["bluetooth", "speaker", "portable"],
+    "imgUrl": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2021/11/TREBLAB-HD77-Black.jpg"
   },
   {
     "id": 4,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 152.59,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "DSLR Camera",
+    "description": "Professional DSLR camera with 24MP sensor",
+    "price": 49799.17,
+    "currency": "INR",
+    "category": "Cameras",
+    "brand": "FotoPro",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 22,
     "specifications": {
       "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "weight": "800g",
+      "sensor": "24MP CMOS",
+      "connectivity": "SD Card"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["dslr", "camera", "professional"],
+    "imgUrl": "https://tse2.mm.bing.net/th/id/OIP.mOtI68bMWv2yJZTZijhNEQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     "id": 5,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 163.19,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Laptop",
+    "description": "Slim laptop with Intel i7 and 16GB RAM",
+    "price": 74699.17,
+    "currency": "INR",
+    "category": "Computers",
+    "brand": "ComputeX",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 18,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Silver",
+      "weight": "1.3kg",
+      "processor": "Intel i7",
+      "ram": "16GB"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["laptop", "slim", "i7"],
+    "imgUrl": "https://th.bing.com/th/id/OIP.7AXuxbrhKyVKdQwn-tbDqAHaE8?o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     "id": 6,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 202.24,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Running Shoes",
+    "description": "Comfortable and durable running shoes for all terrains.",
+    "price": 5809.17,
+    "currency": "INR",
+    "category": "Footwear",
+    "brand": "RunPro",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 34,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Blue",
+      "weight": "300g",
+      "material": "Mesh"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["shoes", "running", "sports"],
+    "imgUrl": "https://img.tatacliq.com/images/i9/437Wx649H/MP000000015600949_437Wx649H_202212081226121.jpeg"
   },
   {
     "id": 7,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 227.47,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Cotton T-Shirt",
+    "description": "Soft cotton t-shirt available in many vibrant colors.",
+    "price": 1659.17,
+    "currency": "INR",
+    "category": "Clothing",
+    "brand": "WearWell",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 110,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "White",
+      "weight": "150g",
+      "material": "Cotton"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["t-shirt", "cotton", "clothing"],
+    "imgUrl": "https://levi.in/cdn/shop/files/169601370_01_Styleshot.jpg?v=1736840861"
   },
   {
     "id": 8,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 231.96,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Electric Kettle",
+    "description": "Fast-boil electric kettle with auto shut-off feature.",
+    "price": 2074.17,
+    "currency": "INR",
+    "category": "Home Appliances",
+    "brand": "BrewHome",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 26,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Silver",
+      "weight": "950g",
+      "capacity": "1.5L"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["kettle", "appliance", "electric"],
+    "imgUrl": "https://www.milton.in/cdn/shop/files/Go_Electro_Kettle_1.2_Litre_5.jpg?v=1760420644&width=810"
   },
   {
     "id": 9,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 226.52,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Office Chair",
+    "description": "Ergonomic swivel office chair for all-day comfort.",
+    "price": 10789.17,
+    "currency": "INR",
+    "category": "Furniture",
+    "brand": "SeatRight",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 12,
     "specifications": {
       "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "weight": "9kg",
+      "material": "Mesh"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["chair", "office", "furniture"],
+    "imgUrl": "https://ik.imagekit.io/2xkwa8s1i/img/chairs/Images13/WSCHRALBUSHBNBBKBKBKML_NEWLS_11.jpg?tr=w-828"
   },
   {
     "id": 10,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 151.29,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Coffee Maker",
+    "description": "Automatic coffee maker for rich and fresh brews.",
+    "price": 4979.17,
+    "currency": "INR",
+    "category": "Kitchen Appliances",
+    "brand": "CafePro",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 40,
     "specifications": {
       "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "weight": "2.2kg",
+      "capacity": "1L"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["coffee", "maker", "kitchen"],
+    "imgUrl": "https://th.bing.com/th/id/OIP.v7ORILVh4Fl0C88CzQDN9QHaHa?w=197&h=197&c=7&r=0&o=7&pid=1.7&rm=3"
   },
   {
     "id": 11,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 155.85,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Mountain Bike",
+    "description": "All-terrain mountain bike with lightweight frame.",
+    "price": 41499.17,
+    "currency": "INR",
+    "category": "Sports",
+    "brand": "CycleMax",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 8,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Yellow",
+      "weight": "13kg",
+      "frame": "Aluminum"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["bike", "mountain", "sports"],
+    "imgUrl": "https://tse2.mm.bing.net/th/id/OIP.x15zZiHrVRQ7olxjJv78vAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   {
     "id": 12,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 176.32,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Yoga Mat",
+    "description": "Eco-friendly yoga mat with non-slip surface.",
+    "price": 2489.17,
+    "currency": "INR",
+    "category": "Fitness",
+    "brand": "FlexiMat",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 47,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Purple",
+      "weight": "620g",
+      "material": "Non-slip"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["yoga", "mat", "fitness"],
+    "imgUrl": "https://th.bing.com/th/id/OIP.kEvpjZBweC8RI5VEfJJIIAHaE8?w=263&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
   },
   {
     "id": 13,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 203.28,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Children's Book",
+    "description": "Delightful storybook with colorful illustrations.",
+    "price": 1078.17,
+    "currency": "INR",
+    "category": "Books",
+    "brand": "ReadGood",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 65,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Multi",
+      "weight": "400g",
+      "pages": "32"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["book", "children", "illustrated"],
+    "imgUrl": "https://th.bing.com/th/id/OIP.DILDSTCcM-JD4uPD1akSUAHaIV?w=159&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
   },
   {
     "id": 14,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 171.35,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "Camping Tent",
+    "description": "Spacious waterproof camping tent for 4 people.",
+    "price": 7469.17,
+    "currency": "INR",
+    "category": "Outdoor",
+    "brand": "CampSafe",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 22,
     "specifications": {
-      "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "color": "Green",
+      "weight": "6kg",
+      "capacity": "4 people"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["tent", "camping", "outdoor"],
+    "imgUrl": "https://media.prod.bunnings.com.au/api/public/content/b865b64f117e47de8bb0718a152e3119?v=96f4d006"
   },
   {
     "id": 15,
-    "name": "Wireless Headphones",
-    "description": "High-quality wireless headphones with noise cancellation",
-    "price": 182.88,
-    "currency": "USD",
-    "category": "Electronics",
-    "brand": "TechBrand",
+    "name": "LED Desk Lamp",
+    "description": "Energy-saving LED desk lamp with touch controls.",
+    "price": 2489.17,
+    "currency": "INR",
+    "category": "Lighting",
+    "brand": "BrightLite",
     "inStock": true,
-    "stockQuantity": 50,
+    "stockQuantity": 29,
+    "specifications": {
+      "color": "White",
+      "weight": "800g",
+      "power": "8W"
+    },
+    "tags": ["lamp", "desk", "LED"],
+    "imgUrl": "https://www.ikea.com/in/en/images/products/ranarp-work-lamp-off-white__1164702_pe890668_s5.jpg?f=s"
+  },
+  {
+    "id": 16,
+    "name": "Pet Feeder",
+    "description": "Automatic pet feeder for dogs and cats.",
+    "price": 3319.17,
+    "currency": "INR",
+    "category": "Pets",
+    "brand": "PetAuto",
+    "inStock": true,
+    "stockQuantity": 14,
+    "specifications": {
+      "color": "White",
+      "weight": "2kg",
+      "capacity": "6L"
+    },
+    "tags": ["pet", "feeder", "automatic"],
+    "imgUrl": "https://m.media-amazon.com/images/I/614+OntDd-L._AC_.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Travel Backpack",
+    "description": "Durable travel backpack with anti-theft features.",
+    "price": 4149.17,
+    "currency": "INR",
+    "category": "Travel",
+    "brand": "PackRight",
+    "inStock": true,
+    "stockQuantity": 23,
     "specifications": {
       "color": "Black",
-      "weight": "250g",
-      "batteryLife": "30 hours",
-      "connectivity": "Bluetooth 5.0"
+      "weight": "1.2kg",
+      "material": "Nylon"
     },
-    "tags": [
-      "wireless",
-      "noise-cancellation",
-      "premium"
-    ]
+    "tags": ["backpack", "travel", "nylon"],
+    "imgUrl": "https://www.bing.com/th?id=OPAC.%2boyav49pPSFKrQ474C474&o=5&pid=21.1&w=140&h=200&rs=1&qlt=100&dpr=0.8&o=2&pcl=f5f5f5"
+  },
+  {
+    "id": 18,
+    "name": "Baby Stroller",
+    "description": "Lightweight foldable stroller for daily convenience.",
+    "price": 13279.17,
+    "currency": "INR",
+    "category": "Baby",
+    "brand": "TinyRoll",
+    "inStock": true,
+    "stockQuantity": 8,
+    "specifications": {
+      "color": "Gray",
+      "weight": "4.5kg",
+      "foldable": "Yes"
+    },
+    "tags": ["baby", "stroller", "foldable"],
+    "imgUrl": "https://rukminim2.flixcart.com/image/300/300/k8g8knk0/stroller-pram/g/g/x/starshine-baby-stroller-18135-stroller-luvlap-original-imafqgh2ax93x2hk.jpeg?q=90"
+  },
+  {
+    "id": 19,
+    "name": "Face Moisturizer",
+    "description": "Hydrating facial moisturizer for all skin types.",
+    "price": 1244.17,
+    "currency": "INR",
+    "category": "Beauty",
+    "brand": "GlowSkin",
+    "inStock": true,
+    "stockQuantity": 47,
+    "specifications": {
+      "color": "White",
+      "weight": "200g",
+      "form": "Cream"
+    },
+    "tags": ["moisturizer", "face", "beauty"],
+    "imgUrl": "https://img.huffingtonpost.com/asset/642e576a2600001d009f759b.jpg?ops=scalefit_960_noupscale"
+  },
+  {
+    "id": 20,
+    "name": "Gaming Mouse",
+    "description": "Precision gaming mouse with customizable buttons.",
+    "price": 3319.17,
+    "currency": "INR",
+    "category": "Gaming",
+    "brand": "GamePro",
+    "inStock": true,
+    "stockQuantity": 32,
+    "specifications": {
+      "color": "Black",
+      "weight": "90g",
+      "dpi": "16000"
+    },
+    "tags": ["mouse", "gaming", "customizable"],
+    "imgUrl": "https://m.media-amazon.com/images/I/61Mk3YqYHpL.jpg"
   }
 ]
