@@ -1,5 +1,6 @@
 // user route function will be written
-const UserSchema = require("../models/user");// /api/users/addUsers
+const UserSchema = require("../models/user");
+// /api/users/addUsers
 const users = require('../user.json');
 const StoreUsers = async (req, res) => {
     try {
@@ -11,5 +12,4 @@ const StoreUsers = async (req, res) => {
         console.log(err.message)
     }
 }
-
 module.exports = StoreUsers

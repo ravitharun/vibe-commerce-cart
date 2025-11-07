@@ -3,9 +3,9 @@ const Products = require('../Product.json');
 
 
 const getAllProducts = async (req, res) => {
-  // const products = await Product.find();
-  // console.log(Products)
-  res.json({ message: Products });
+  const products = await Product.find();
+  console.log(products)
+  res.json({ message: products });
 };
 
 const createProduct = async (req, res) => {

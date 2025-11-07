@@ -1,28 +1,23 @@
 import React from "react";
+import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-
-const products = [
-  {
-    id: 1,
-    name: "Product A",
-    price: 100,
-    img: "https://via.placeholder.com/300x200?text=Product+A",
-  },
-  {
-    id: 2,
-    name: "Product B",
-    price: 200,
-    img: "https://via.placeholder.com/300x200?text=Product+B",
-  },
-  {
-    id: 3,
-    name: "Product C",
-    price: 150,
-    img: "https://via.placeholder.com/300x200?text=Product+C",
-  },
-];
+import axios from 'axios'
 
 const ProductGrid = ({ addToCart }) => {
+  const [products, SetProducts] = useState([])
+  useEffect(() => {
+    const GetallProdcuts = async () => {
+      try {
+        const Product = await axios.get("http://localhost:5000/api/products/new")
+        console.log(Product.data.message)
+      }
+      catch (err) {
+        return console.log(err.message, 'Error from the product api')
+      }
+    }
+    GetallProdcuts()
+  }, [])
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
       {products.map((product) => (
