@@ -1,20 +1,46 @@
 // CartLayout.jsx
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
+import { param } from "../../../../Backend/routes/productRoutes";
+import Getemail from "../UserEmail";
+import axios from "axios";
 
-const Cart = ({ addToCart,cartItems, removeFromCart }) => {
-  console.log(addToCart,'addToCart')
+const Cart = ({ addToCart, cartItems, removeFromCart }) => {
+  console.log(addToCart, 'addToCart')
   const total = cartItems?.reduce((acc, item) => acc + item.price * item.qty, 0);
+
+  const [CartItems, setcart] = useState([])
+  useEffect(() => {
+    const Getcart = async () => {
+      try {
+        const cartProducts = await axios.get("", {
+          param: {
+            email: Getemail
+          }
+        })
+        console.log(cartProducts.data.message)
+        setcart(cartProducts.data.message)
+
+      } catch (error) {
+        console.log(error.message, 'from the cart items Display')
+      }
+    }
+    Getcart()
+
+  }, [])
+
 
   return (
     <div className="flex flex-col md:flex-row gap-6 p-4">
       {/* Left: Products */}
       <div className="flex-1">
         <h2 className="text-2xl font-bold mb-4">Products</h2>
-        {cartItems.length === 0 ? (
+        {CartItems.length === 0 ? (
           <p className="text-gray-500">No products in the cart.</p>
         ) : (
-          cartItems.map((item) => (
+          CartItems.map((item) => (
             <div
               key={item.id}
               className="flex justify-between items-center mb-3 p-3 border rounded shadow hover:shadow-lg transition"
