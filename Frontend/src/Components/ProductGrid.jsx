@@ -11,7 +11,7 @@ const ProductGrid = () => {
     const GetallProdcuts = async () => {
       try {
         const Product = await axios.get("http://localhost:5000/api/products/new")
-        
+
         SetProducts(Product.data.message)
       }
       catch (err) {
@@ -21,14 +21,14 @@ const ProductGrid = () => {
     GetallProdcuts()
   }, [])
 
- 
+
 
 
   const addToCart = async (id, Getemail) => {
 
     try {
       console.log({ id, Getemail })
-      const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart",{id, Getemail})
+      const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart", { id, Getemail })
       console.log(Addcart.data.message, "Addcart")
     }
     catch (err) {
@@ -36,18 +36,22 @@ const ProductGrid = () => {
     }
   }
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {products.map((product) => (
         <div
           key={product.id}
           className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200"
         >
-          <img
-            src={product.imgUrl}
-            alt={product.name}
-            className="w-full h-48 object-cover"
-          />
+          {/* Product Image */}
+          <div className="w-full h-48 overflow-hidden rounded-t-2xl">
+            <img
+              src={product.imgUrl}
+              alt={product.name}
+              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
 
+          {/* Product Details */}
           <div className="p-4 space-y-3">
             <h2 className="text-lg font-semibold text-gray-800 truncate">
               {product.name}
@@ -59,8 +63,8 @@ const ProductGrid = () => {
               </span>
 
               <button
-                onClick={() => addToCart(product._id,Getemail)}
-                className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full shadow hover:scale-105 transition-all"
+                onClick={() => addToCart(product._id, Getemail)}
+                className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full shadow hover:scale-105 transition-transform duration-200"
               >
                 <FaShoppingCart />
                 Add
