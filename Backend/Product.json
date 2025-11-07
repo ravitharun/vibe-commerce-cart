@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 195.76,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 249.29,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 179.65,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 152.59,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 163.19,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 202.24,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 227.47,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 231.96,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 226.52,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 151.29,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 155.85,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 176.32,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 203.28,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 171.35,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Wireless Headphones",
+    "description": "High-quality wireless headphones with noise cancellation",
+    "price": 182.88,
+    "currency": "USD",
+    "category": "Electronics",
+    "brand": "TechBrand",
+    "inStock": true,
+    "stockQuantity": 50,
+    "specifications": {
+      "color": "Black",
+      "weight": "250g",
+      "batteryLife": "30 hours",
+      "connectivity": "Bluetooth 5.0"
+    },
+    "tags": [
+      "wireless",
+      "noise-cancellation",
+      "premium"
+    ]
+  }
+]
