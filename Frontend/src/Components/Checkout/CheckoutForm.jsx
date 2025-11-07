@@ -24,6 +24,9 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
       phone,
       address
     }
+    const Checkout=await axios.post("",{CheckoutForm})
+    console.log(Checkout,'Checkout')
+
     console.log("checkoutForm", checkoutForm)
 
 

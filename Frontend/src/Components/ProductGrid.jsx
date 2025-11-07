@@ -11,7 +11,7 @@ const ProductGrid = () => {
     const GetallProdcuts = async () => {
       try {
         const Product = await axios.get("http://localhost:5000/api/products/new")
-        console.log(Product.data.message)
+        
         SetProducts(Product.data.message)
       }
       catch (err) {
