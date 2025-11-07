@@ -2,14 +2,17 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { FaShoppingCart } from "react-icons/fa";
 import axios from 'axios'
+import Getemail from "../Components/UserEmail"
+const ProductGrid = () => {
+  const [products, SetProducts] = useState([]);
 
-const ProductGrid = ({ addToCart }) => {
-  const [products, SetProducts] = useState([])
+
   useEffect(() => {
     const GetallProdcuts = async () => {
       try {
         const Product = await axios.get("http://localhost:5000/api/products/new")
         console.log(Product.data.message)
+        SetProducts(Product.data.message)
       }
       catch (err) {
         return console.log(err.message, 'Error from the product api')
@@ -18,41 +21,56 @@ const ProductGrid = ({ addToCart }) => {
     GetallProdcuts()
   }, [])
 
+ 
+
+
+  const addToCart = async (id, Getemail) => {
+
+    try {
+      console.log({ id, Getemail })
+      const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart",{id, Getemail})
+      console.log(Addcart.data.message, "Addcart")
+    }
+    catch (err) {
+      return console.log(err.message, 'from the add to cart function ')
+    }
+  }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
       {products.map((product) => (
         <div
           key={product.id}
-          className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200"
         >
           <img
-            src={product.img}
+            src={product.imgUrl}
             alt={product.name}
-            className="w-full h-48 object-cover rounded-xl group-hover:scale-105 transform transition-all duration-300"
+            className="w-full h-48 object-cover"
           />
-          {/* Price badge */}
-          <span className="absolute top-3 right-3 bg-white/80 text-gray-800 px-3 py-1 rounded-lg font-semibold shadow">
-            ₹{product.price}
-          </span>
 
-          {/* Overlay button */}
-          <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-            <button
-              onClick={() => addToCart(product)}
-              className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full shadow-lg font-semibold hover:scale-105 transform transition-all duration-200"
-            >
-              <FaShoppingCart />
-              Add to Cart
-            </button>
-          </div>
+          <div className="p-4 space-y-3">
+            <h2 className="text-lg font-semibold text-gray-800 truncate">
+              {product.name}
+            </h2>
 
-          {/* Product Name */}
-          <div className="absolute bottom-3 left-3 bg-white/80 px-3 py-1 rounded-lg font-medium text-gray-800 shadow">
-            {product.name}
+            <div className="flex justify-between items-center">
+              <span className="text-xl font-bold text-green-600">
+                ₹{product.price.toLocaleString("en-IN")}
+              </span>
+
+              <button
+                onClick={() => addToCart(product._id,Getemail)}
+                className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full shadow hover:scale-105 transition-all"
+              >
+                <FaShoppingCart />
+                Add
+              </button>
+            </div>
           </div>
         </div>
       ))}
     </div>
+
   );
 };
 

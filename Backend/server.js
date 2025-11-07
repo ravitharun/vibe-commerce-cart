@@ -16,7 +16,7 @@ app.use(express.json());
 // Routes
 app.use("/api/products", productRoutes);
 app.use("/api/users", UserRoutes);
-app.use(" /api/cart", CartRoutes);
+app.use("/api/cart", CartRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)

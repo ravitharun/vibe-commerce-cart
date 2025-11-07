@@ -2,7 +2,8 @@
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 
-const Cart = ({ cartItems, removeFromCart }) => {
+const Cart = ({ addToCart,cartItems, removeFromCart }) => {
+  console.log(addToCart,'addToCart')
   const total = cartItems?.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   return (
