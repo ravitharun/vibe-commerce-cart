@@ -36,7 +36,7 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
 
       <div className="min-h-screen bg-gray-50 flex justify-center items-start py-10 px-4 font-sans" style={{ fontFamily: "'Poppins', sans-serif" }}>
         {Error && <div className="bg-red-300 font-mono">
-          <button>Close</button>
+          <button className="bg-blue-500 p-2 cursor-pointer">Close</button>
           {Error}
         </div>}
         <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-8">
