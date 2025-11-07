@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-
+import axios from 'axios'
 // Add this in your index.html or import in main CSS:
 // <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 const CheckoutForm = ({ onCheckout, cartItems, total }) => {
+  console.log({ onCheckout, cartItems, total })
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [Error, setErrormessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (name != "" || phone != "" || email != "" || address != "") {
       return setErrormessage("Fil the required feilds")
@@ -23,9 +24,10 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
       address
     }
     console.log(checkoutForm, 'checkoutForm')
-    const postformdata=await axios.post("",{
+    const postformdata = await axios.post("", {
       checkoutForm
     })
+    console.log(postformdata.data.message,'postformdata')
 
   };
 
