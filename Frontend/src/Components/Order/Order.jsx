@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 function Order() {
     const location = useLocation();
   const { orderId } = location.state || {};
+  console.log(orderId,'orderId')
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">

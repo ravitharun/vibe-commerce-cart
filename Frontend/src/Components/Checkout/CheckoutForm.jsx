@@ -28,9 +28,9 @@ const CheckoutForm = ({ CartItems }) => {
     console.log(Checkout.data.message, 'Checkout')
     if (Checkout.data.message == 'Order Confirmed') {
       alert(Checkout.data.message)
-      return redirect("/orderConfirmed",{
+      return redirect("/orderConfirmed", {
         state: {
-          orderId:Checkout.data.message.orderId
+          orderId: Checkout.data.orderId
         }
       })
     }
@@ -166,7 +166,7 @@ const CheckoutForm = ({ CartItems }) => {
 
             <div className="flex justify-between font-bold text-xl pt-4">
               <span>Total</span>
-              <span>₹{TotalAmount == "" ? '100'  :TotalAmount.toLocaleString("")}</span>
+              <span>₹{TotalAmount == "" ? '100' : TotalAmount.toLocaleString("")}</span>
             </div>
           </div>
 
