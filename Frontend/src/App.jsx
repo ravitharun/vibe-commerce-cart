@@ -9,11 +9,11 @@ import CheckoutForm from './Components/Checkout/CheckoutForm';
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      
-      
+
+
+
       <Routes>
-        
+
         <Route path="/" element={<ProductsGrid />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<CheckoutForm />} />

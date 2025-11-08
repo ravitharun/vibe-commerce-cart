@@ -14,7 +14,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 font-medium text-gray-700">
-          <Link to="/Products">
+          <Link to="/">
             <li className="cursor-pointer hover:text-blue-600 transition">Products</li>
           </Link>
           <Link to="/cart">
@@ -36,10 +36,14 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {open && (
         <div className="md:hidden bg-gray-50 w-full text-center py-3 space-y-3 border-t">
+          <Link to="/">
           <p className="hover:text-blue-600 cursor-pointer">Products</p>
+          </Link>
+             <Link to="/cart">
           <p className="hover:text-blue-600 cursor-pointer flex justify-center gap-2">
             <FaShoppingCart /> Cart
           </p>
+             </Link>
         </div>
       )}
     </nav>
