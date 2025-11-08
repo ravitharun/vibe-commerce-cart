@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { FaUser, FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 import axios from 'axios'
-// Add this in your index.html or import in main CSS:
-// <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+import { useNavigate } from "react-router-dom";
 
 const CheckoutForm = ({ CartItems }) => {
   console.log({ CartItems })
@@ -11,7 +10,7 @@ const CheckoutForm = ({ CartItems }) => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [Message, setmessage] = useState("");
-
+  const redirect = useNavigate("")
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (name == "" && phone == "" && email == "" && address == "") {
@@ -19,21 +18,29 @@ const CheckoutForm = ({ CartItems }) => {
       return setmessage("Fil the required feilds")
     }
 
-    const checkoutForm = {
-      name,
-      email,
-      phone,
-      address
+    const checkoutFormData = {
+      name: name,
+      email: email,
+      phone: phone,
+      address: address,
     }
-    const Checkout = await axios.post("", { CheckoutForm })
-    console.log(Checkout, 'Checkout')
+    const Checkout = await axios.post("http://localhost:5000/api/carcheckout/", { checkoutFormData, CartItems })
+    console.log(Checkout.data.message, 'Checkout')
+    if (Checkout.data.message == 'Order Confirmed') {
+      alert(Checkout.data.message)
+      return redirect("/orderConfirmed",{
+        state: {
+          orderId:Checkout.data.message.orderId
+        }
+      })
+    }
 
-    console.log("checkoutForm", checkoutForm)
+    console.log("checkoutFormData", checkoutFormData)
 
 
 
   };
-  const TotalAmount = CartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const TotalAmount = CartItems.reduce((acc, item) => acc + item.total * item.qty, 0);
   console.log(TotalAmount, 'TotalAmount')
 
   return (
@@ -159,7 +166,7 @@ const CheckoutForm = ({ CartItems }) => {
 
             <div className="flex justify-between font-bold text-xl pt-4">
               <span>Total</span>
-              <span>₹{TotalAmount == "" ? TotalAmount : '100'}</span>
+              <span>₹{TotalAmount == "" ? '100'  :TotalAmount.toLocaleString("")}</span>
             </div>
           </div>
 

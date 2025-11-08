@@ -28,11 +28,11 @@ const Cart = () => {
   }, [Getemail]);
 
 
-
+  console.log(CartItems, 'CartItems')
 
 
   // count total
-  const total = CartItems?.reduce((acc, item) => acc + item.price * item.qty, 0);
+  const total = CartItems?.reduce((acc, item) => acc + item.total * item.qty, 0).toFixed(2);
 
 
 
@@ -40,14 +40,21 @@ const Cart = () => {
 
   //removeFromCart 
   const removeFromCart = async (id) => {
+
     try {
-      const DeltedcartItm = await axios.delete(`http://localhost:5000/api/cart/${id}`)
-      console.log(DeltedcartItm.data.message)
+      console.log(id,'id')
+      const DeletedCartItem = await axios.delete(
+        `http://localhost:5000/api/cart/${id}/${Getemail}`
+      );
+      console.log(DeletedCartItem.data.message == 'delted the item');
+      if (DeletedCartItem.data.message == 'delted the item') {
+        alert(DeletedCartItem.data.message)
+        setcart(prev => prev.filter(item => item.productId !== id));
+      }
+    } catch (err) {
+      alert(err.message);
     }
-    catch (err) {
-      alert(err.message)
-    }
-  }
+  };
 
 
 
@@ -80,9 +87,9 @@ const Cart = () => {
                   <p className="text-gray-500">Qty: {item.qty}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <p className="font-semibold">₹{item.total}</p>
+                  <p className="font-semibold">₹{item.total.toLocaleString()}</p>
                   <button
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.productId)}
                     className="text-red-500 hover:text-red-700"
                   >
                     <FaTrashAlt />
@@ -97,9 +104,9 @@ const Cart = () => {
         <div className="w-full md:w-1/3 p-4 border rounded shadow bg-gray-50">
           <h2 className="text-xl font-bold mb-4">Bill Summary</h2>
           <p className="mb-2">Items: {CartItems.length}</p>
-          <p className="font-semibold text-lg mb-4">Total: ₹{total}</p>
+          <p className="font-semibold text-lg mb-4">Total: ₹{total.toLocaleString("")}</p>
           <button className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600" onClick={Showcart}>
-            {checkout ? 'cancelCheckout' : 'Checkout'}
+            {checkout ? 'Cancel Checkout' : 'Checkout'}
           </button>
         </div>
       </div>

@@ -104,8 +104,23 @@ const RemoveProductCart = async (req, res) => {
   try {
     const { id, email } = req.params
     console.log({ id, email })
-    const Addtocart = await CartSchema.create()
-    console.log(Addtocart)
+    if (!id && !email) {
+      return res.staus(404).json({ message: "Id and email is undefined " })
+    }
+    const updatedCart = await CartSchema.findOneAndUpdate(
+      { userEmail: email },
+      {
+        $pull: {
+          cartItems: { productId: id }
+        }
+      },
+      { new: true }
+    );
+
+    if (!updatedCart) {
+      return res.status(404).json({ message: "Cart or item not found" });
+    }
+    res.status(200).json({ message: 'delted the item' })
   }
   catch (err) {
     return res.status(500).json({ message: err.message })

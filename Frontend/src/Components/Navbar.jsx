@@ -37,13 +37,13 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden bg-gray-50 w-full text-center py-3 space-y-3 border-t">
           <Link to="/">
-          <p className="hover:text-blue-600 cursor-pointer">Products</p>
+            <p className="hover:text-blue-600 cursor-pointer">Products</p>
           </Link>
-             <Link to="/cart">
-          <p className="hover:text-blue-600 cursor-pointer flex justify-center gap-2">
-            <FaShoppingCart /> Cart
-          </p>
-             </Link>
+          <Link to="/cart">
+            <p className="hover:text-blue-600 cursor-pointer flex justify-center gap-2">
+              <FaShoppingCart /> Cart
+            </p>
+          </Link>
         </div>
       )}
     </nav>
