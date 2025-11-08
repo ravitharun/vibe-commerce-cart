@@ -5,6 +5,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import Getemail from "../UserEmail";
 import axios from "axios";
 import CheckoutForm from "../Checkout/CheckoutForm";
+import Navbar from "../Navbar";
 
 const Cart = () => {
   const [CartItems, setcart] = useState([])
@@ -59,11 +60,14 @@ const Cart = () => {
 
   return (
     <>
+
+
+      <Navbar></Navbar>
       <div className="flex flex-col md:flex-row gap-6 p-4">
         {/* Left: Products */}
         <div className="flex-1">
           <h2 className="text-2xl font-bold mb-4">Products</h2>
-          {CartItems.length === 0 ? (
+          {CartItems?.length == 0 ? (
             <p className="text-gray-500">No products in the cart.</p>
           ) : (
             CartItems.map((item) => (
@@ -95,12 +99,12 @@ const Cart = () => {
           <p className="mb-2">Items: {CartItems.length}</p>
           <p className="font-semibold text-lg mb-4">Total: ₹{total}</p>
           <button className="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600" onClick={Showcart}>
-            Checkout
+            {checkout ? 'cancelCheckout' : 'Checkout'}
           </button>
         </div>
       </div>
       <Activity mode={checkout ? "visible" : "hidden"}>
-        <CheckoutForm />
+        <CheckoutForm CartItems={CartItems} />
       </Activity>
     </>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes, FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,10 +14,14 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 font-medium text-gray-700">
-          <li className="cursor-pointer hover:text-blue-600 transition">Products</li>
-          <li className="cursor-pointer hover:text-blue-600 transition flex items-center gap-2">
-            <FaShoppingCart /> Cart
-          </li>
+          <Link to="/Products">
+            <li className="cursor-pointer hover:text-blue-600 transition">Products</li>
+          </Link>
+          <Link to="/cart">
+            <li className="cursor-pointer hover:text-blue-600 transition flex items-center gap-2">
+              <FaShoppingCart /> Cart
+            </li>
+          </Link>
         </ul>
 
         {/* Mobile Menu Button */}

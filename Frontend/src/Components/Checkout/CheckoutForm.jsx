@@ -4,8 +4,8 @@ import axios from 'axios'
 // Add this in your index.html or import in main CSS:
 // <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-const CheckoutForm = ({ onCheckout, cartItems, total }) => {
-  console.log({ onCheckout, cartItems, total })
+const CheckoutForm = ({ CartItems }) => {
+  console.log({ CartItems })
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -15,6 +15,7 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (name == "" && phone == "" && email == "" && address == "") {
+      console.log(CartItems, 'CartItems')
       return setmessage("Fil the required feilds")
     }
 
@@ -24,14 +25,16 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
       phone,
       address
     }
-    const Checkout=await axios.post("",{CheckoutForm})
-    console.log(Checkout,'Checkout')
+    const Checkout = await axios.post("", { CheckoutForm })
+    console.log(Checkout, 'Checkout')
 
     console.log("checkoutForm", checkoutForm)
 
 
 
   };
+  const TotalAmount = CartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  console.log(TotalAmount, 'TotalAmount')
 
   return (
     <>
@@ -143,20 +146,20 @@ const CheckoutForm = ({ onCheckout, cartItems, total }) => {
           <div className="w-full lg:w-1/3 bg-white/90 backdrop-blur-md rounded-3xl shadow-xl p-8 border border-gray-200">
             <h3 className="text-2xl font-semibold text-gray-800 mb-5">Order Summary</h3>
 
-            {cartItems?.length === 0 ? (
+            {CartItems.length === 0 ? (
               <p className="text-gray-500">No items in cart</p>
             ) : (
-              cartItems?.map((item) => (
+              CartItems?.map((item) => (
                 <div key={item.id} className="flex justify-between items-center border-b pb-3 mb-3">
                   <p className="font-medium">{item.name} × {item.qty}</p>
-                  <p className="font-semibold text-gray-800">₹{item.price * item.qty}</p>
+                  <p className="font-semibold text-gray-800">₹{(item.total * item.qty).toLocaleString()}</p>
                 </div>
               ))
             )}
 
             <div className="flex justify-between font-bold text-xl pt-4">
               <span>Total</span>
-              <span>₹{total}</span>
+              <span>₹{TotalAmount == "" ? TotalAmount : '100'}</span>
             </div>
           </div>
 
