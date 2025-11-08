@@ -7,57 +7,109 @@ const Cart = async (req, res) => {
   try {
     const { id, Getemail } = req.body;
 
+    // Find user
     const getUserinfo = await UserSchema.findOne({ email: Getemail });
-    const Getproduct = await productSchema.findById(id); // simpler
+    if (!getUserinfo) return res.status(404).json({ message: "User not found" });
 
-    if (!getUserinfo || !Getproduct) {
-      return res.status(404).json({ message: "User or product not found" });
-    }
+    // Find product
+    const Getproduct = await productSchema.findById(id);
+    if (!Getproduct) return res.status(404).json({ message: "Product not found" });
 
-    const Addtocart = await CartSchema.create({
-      userId: getUserinfo._id,
-      userEmail: getUserinfo.email,
-      cartItems: [
-        {
+    const Defaultqty = 2;
+
+    // Find user's cart
+    let userCart = await CartSchema.findOne({ userId: getUserinfo._id });
+
+    if (userCart) {
+      // Check if product already exists in cart
+      const existingItem = userCart.cartItems.find(
+        (item) => item.productId.toString() === id
+      );
+
+      if (existingItem) {
+        // Product exists, increment quantity
+        existingItem.qty += Defaultqty;
+      } else {
+        // Product doesn't exist, add new
+        userCart.cartItems.push({
           productId: Getproduct._id,
           name: Getproduct.name,
-          qty: 2
-        }
-      ]
-    });
+          qty: Defaultqty,
+        });
+      }
 
-    return res.status(200).json({ message: "Added into the cart" });
+      await userCart.save();
+      return res.status(200).json({ message: "Cart updated successfully", cart: userCart });
+    } else {
+      // Create new cart for user
+      const newCart = await CartSchema.create({
+        userId: getUserinfo._id,
+        userEmail: getUserinfo.email,
+        cartItems: [
+          {
+            productId: Getproduct._id,
+            name: Getproduct.name,
+            qty: Defaultqty,
+          },
+        ],
+      });
 
+      return res.status(200).json({ message: "Cart created and product added", cart: newCart });
+    }
   } catch (err) {
+    console.error(err);
     return res.status(500).json({ message: err.message });
   }
 };
 
 
 
+
+// get the cart ItemProduct based on the Ref--->(usereEmail)
+
+const Getcartitem = async (req, res) => {
+  try {
+    const { Getemail } = req.query
+    if (!Getemail) {
+      return res.status(404).json({ message: "Something went wrong" })
+    }
+    const getCartProducts = await CartSchema.find({ userEmail: Getemail })
+    if (getCartProducts.length == 0) {
+      return res.status(404).json({ message: "No carts Item found" })
+    }
+    res.status(200).json({ message: getCartProducts })
+
+  } catch (error) {
+
+    return res.status(500).json({ message: error.message })
+
+  }
+}
+
+
 // rmv the product from cart ref-->productId method-->(delete)
 const RemoveProductCart = async (req, res) => {
-    try {
-        const { id, email } = req.params
-        console.log({ id, email })
-        const Addtocart = await CartSchema.create()
-        console.log(Addtocart)
-    }
-    catch (err) {
-        return res.status(500).json({ message: err.message })
-    }
+  try {
+    const { id, email } = req.params
+    console.log({ id, email })
+    const Addtocart = await CartSchema.create()
+    console.log(Addtocart)
+  }
+  catch (err) {
+    return res.status(500).json({ message: err.message })
+  }
 }
 // update the cart item ref-->email and (productid) method-->(put)
 const UpdateCart = async (req, res) => {
-    try {
-        const { id, email } = req.params
-        console.log({ id, email })
-        const Addtocart = await CartSchema.findById({ id })
-        console.log(Addtocart)
+  try {
+    const { id, email } = req.params
+    console.log({ id, email })
+    const Addtocart = await CartSchema.findById({ id })
+    console.log(Addtocart)
 
-    }
-    catch (err) {
-        return res.status(500).json({ message: err.message })
-    }
+  }
+  catch (err) {
+    return res.status(500).json({ message: err.message })
+  }
 }
-module.exports = { Cart, RemoveProductCart, UpdateCart }
+module.exports = { Cart, Getcartitem, RemoveProductCart, UpdateCart }

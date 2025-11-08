@@ -29,14 +29,18 @@ const ProductGrid = () => {
     try {
       console.log({ id, Getemail })
       const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart", { id, Getemail })
-      console.log(Addcart.data.message, "Addcart")
-    }
+      if (Addcart.data.message == 'Added into cart') {
+        return alert("Added into cart Addcar")
+      }
+       alert(Addcart.data.message)
+     }
+    
     catch (err) {
       return console.log(err.message, 'from the add to cart function ')
     }
   }
   return (
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {products.map((product) => (
         <div
           key={product.id}

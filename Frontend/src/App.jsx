@@ -1,6 +1,7 @@
 import React from 'react'
 import ProductsGrid from './Components/ProductGrid'
 import Navbar from './Components/Navbar'
+import Cart from './Components/Cart/Cart'
 
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
     <>
       <Navbar></Navbar>
       <ProductsGrid></ProductsGrid>
+      <Cart></Cart>
+      
 
     </>
   )
