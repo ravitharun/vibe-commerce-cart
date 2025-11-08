@@ -54,7 +54,7 @@ const Cart = () => {
 
   // Showcart
   const Showcart = () => {
-    alert("hi")
+
     Setcheckout((prev) => !prev)
   }
 
