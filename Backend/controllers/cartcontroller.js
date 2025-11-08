@@ -5,7 +5,8 @@ const productSchema = require('../models/Product');
 //  get the cart of productBased on the (UserEmail) method-->(post)
 const Cart = async (req, res) => {
   try {
-    const { id, Getemail } = req.body;
+    const { id, Getemail, total } = req.body;
+    console.log({ id, Getemail })
 
     // Find user
     const getUserinfo = await UserSchema.findOne({ email: Getemail });
@@ -35,6 +36,7 @@ const Cart = async (req, res) => {
           productId: Getproduct._id,
           name: Getproduct.name,
           qty: Defaultqty,
+          total: Defaultqty * total
         });
       }
 
@@ -50,6 +52,7 @@ const Cart = async (req, res) => {
             productId: Getproduct._id,
             name: Getproduct.name,
             qty: Defaultqty,
+            total: Defaultqty * total
           },
         ],
       });
@@ -67,24 +70,33 @@ const Cart = async (req, res) => {
 
 // get the cart ItemProduct based on the Ref--->(usereEmail)
 
-const Getcartitem = async (req, res) => {
+const GetCartItems = async (req, res) => {
   try {
-    const { Getemail } = req.query
+    const { Getemail } = req.query;
+
     if (!Getemail) {
-      return res.status(404).json({ message: "Something went wrong" })
+      return res.status(400).json({ message: "Email is required" });
     }
-    const getCartProducts = await CartSchema.find({ userEmail: Getemail })
-    if (getCartProducts.length == 0) {
-      return res.status(404).json({ message: "No carts Item found" })
+
+    // Find cart for this user
+    const userCart = await CartSchema.findOne({ userEmail: Getemail });
+
+    if (!userCart || userCart.cartItems.length === 0) {
+      return res.status(404).json({ message: "No cart items found" });
     }
-    res.status(200).json({ message: getCartProducts })
 
-  } catch (error) {
-
-    return res.status(500).json({ message: error.message })
-
+    // Return cart items
+    return res.status(200).json({ message: userCart.cartItems });
+  } catch (err) {
+    console.log(err.message)
+    return res.status(500).json({ message: err.message });
   }
-}
+};
+
+module.exports = { GetCartItems };
+
+
+
 
 
 // rmv the product from cart ref-->productId method-->(delete)
@@ -112,4 +124,4 @@ const UpdateCart = async (req, res) => {
     return res.status(500).json({ message: err.message })
   }
 }
-module.exports = { Cart, Getcartitem, RemoveProductCart, UpdateCart }
+module.exports = { Cart, GetCartItems, RemoveProductCart, UpdateCart }

@@ -24,11 +24,11 @@ const ProductGrid = () => {
 
 
 
-  const addToCart = async (id, Getemail) => {
+  const addToCart = async (id, Getemail,total) => {
 
     try {
       console.log({ id, Getemail })
-      const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart", { id, Getemail })
+      const Addcart = await axios.post("http://localhost:5000/api/cart/Addcart", { id, Getemail,total })
       if (Addcart.data.message == 'Added into cart') {
         return alert("Added into cart Addcar")
       }
@@ -67,7 +67,7 @@ const ProductGrid = () => {
               </span>
 
               <button
-                onClick={() => addToCart(product._id, Getemail)}
+                onClick={() => addToCart(product._id, Getemail,product.price)}
                 className="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full shadow hover:scale-105 transition-transform duration-200"
               >
                 <FaShoppingCart />
