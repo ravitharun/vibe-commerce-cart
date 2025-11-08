@@ -1,7 +1,7 @@
 import React from "react";
 import { FaCheckCircle, FaShoppingBag, FaArrowRight } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 function Order() {
     const location = useLocation();
