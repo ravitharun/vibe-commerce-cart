@@ -10,10 +10,10 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
 
         {/* LOGO */}
-        <h1 className="text-2xl font-bold text-gray-800">MyStore</h1>
+        <h1 className="text-2xl font-bold text-gray-800">Store</h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 font-medium text-gray-700">
+        <ul className="hidden md:flex gap-10 font-medium text-gray-500">
           <Link to="/">
             <li className="cursor-pointer hover:text-blue-600 transition">Products</li>
           </Link>
